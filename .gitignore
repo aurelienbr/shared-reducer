@@ -9,6 +9,9 @@
 /coverage
 /e2e/coverage
 
+#ts
+/dist
+
 # production
 /build
 

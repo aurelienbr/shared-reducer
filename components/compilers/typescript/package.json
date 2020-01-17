@@ -1,0 +1,74 @@
+{
+  "name": "@bit/bit.envs.compilers.typescript",
+  "version": "3.1.29",
+  "homepage": "https://bit.dev/bit/envs/compilers/typescript",
+  "main": "dist/ts-compiler/src/index.js",
+  "dependencies": {
+    "execa": "^2.0.4",
+    "fs-extra": "8.1.0",
+    "lodash": "^4.17.15",
+    "md5": "2.2.1",
+    "recursive-readdir": "^2.2.2",
+    "typescript": "3.7.3",
+    "vinyl": "^2.2.0",
+    "chai": "4.2.0",
+    "rimraf": "3.0.0",
+    "sinon": "7.5.0",
+    "@types/recursive-readdir": "^2.2.0",
+    "@bit/bit.envs.common.compiler-types": "0.0.9",
+    "@bit/bit.envs.common.isolate": "0.0.7",
+    "@bit/bit.envs.common.preset": "0.0.6",
+    "@bit/bit.envs.common.build-component": "0.0.12",
+    "@bit/bit.envs.common.create-workspace": "0.0.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/recursive-readdir": "^2.2.0",
+    "@types/vinyl": "^2.0.3",
+    "@types/node": "^12.7.4",
+    "@types/mocha": "^5.2.7",
+    "bit-bin": "14.6.0"
+  },
+  "peerDependencies": {},
+  "license": "SEE LICENSE IN LICENSE",
+  "bit": {
+    "env": {
+      "compiler": {
+        "bit.envs/compilers/typescript@3.1.11": {
+          "rawConfig": {
+            "tsconfig": {
+              "compilerOptions": {
+                "target": "ES5",
+                "module": "CommonJS",
+                "skipLibCheck": true
+              }
+            },
+            "development": false,
+            "copyPolicy": {
+              "ignorePatterns": [
+                "package.json",
+                "package-lock.json",
+                "tsconfig.json"
+              ],
+              "disable": false
+            }
+          },
+          "options": {},
+          "files": {}
+        }
+      }
+    },
+    "overrides": {
+      "dependencies": {
+        "@types/recursive-readdir": "+",
+        "recursive-readdir": "+",
+        "bit-bin": "-"
+      },
+      "devDependencies": {
+        "@types/node": "+",
+        "@types/mocha": "^5.2.7",
+        "bit-bin": "14.6.0"
+      }
+    }
+  }
+}

@@ -1,9 +1,6 @@
 {
+  "declaration": true,
   "compilerOptions": {
-    "incremental": true,
-    "noImplicitAny": true,
-    "strictPropertyInitialization": false,
-    "baseUrl": "./src",
     "target": "es5",
     "lib": [
       "dom",
@@ -21,13 +18,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
   },
+  "exclude": [ "**/__tests__/*" ],
   "include": [
-    "src",
-    "e2e",
-    "jest.config.js",
-    "workbox.config.js"
-  ],
-  "extends": "./paths.json"
+    "src"
+  ]
 }

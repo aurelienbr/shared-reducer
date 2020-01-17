@@ -1,6 +1,6 @@
 import { fork, spawn, all } from 'redux-saga/effects';
 
-import loginSaga from '~sagas/loginSaga';
+import todoSaga from './todoSaga';
 
 export default function * () {
   yield fork(bootstrap);
@@ -8,7 +8,7 @@ export default function * () {
 
 function * bootstrap () {
   try {
-    yield all([spawn(loginSaga)]);
+    yield all([spawn(todoSaga)]);
   } catch (e) {
     // @TODO
   }
