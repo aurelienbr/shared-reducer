@@ -2,7 +2,6 @@ import { updateObjectInArray, deleteObjectInArray } from '../objectUtils';
 
 describe('updateObjectInArray', () => {
   let array: Array<{id: number; title: string; action: string}> = [];
-  const error = 'The ID is not defined';
 
   beforeEach(() => {
     array = [

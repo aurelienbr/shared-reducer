@@ -1,6 +1,6 @@
 {
   "name": "shared-reducers-toddo",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -34,7 +34,7 @@
     "typescript": "3.7.4"
   },
   "scripts": {
-    "prepublish": "tsc",
+    "prepublish": "tsc --noEmit false --outDir dist --declaration true",
     "start": "serve -s build",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test --watchAll=false --collectCoverage=true --coverageReporters=html",
@@ -49,7 +49,8 @@
     "tsc": "tsc",
     "tsc:watch": "tsc --watch",
     "eslint": "eslint src/ --ext .ts --ext .tsx",
-    "eslint:fix": "eslint src/ --ext .ts --ext .tsx --fix"
+    "eslint:fix": "eslint src/ --ext .ts --ext .tsx --fix",
+    "build:check": "tsc --noEmit"
   },
   "jest": {
     "moduleNameMapper": {
@@ -129,10 +130,5 @@
     "serve": "11.1.0",
     "source-map-explorer": "2.0.1",
     "ts-jest": "24.2.0"
-  },
-  "bit": {
-    "env": {},
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
   }
 }

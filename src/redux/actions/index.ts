@@ -1,1 +1,5 @@
-export * from './todoActions';
+import * as todoActions from './todoActions';
+
+export default {
+  todo: todoActions
+};

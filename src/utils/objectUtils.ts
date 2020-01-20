@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 function flattenNextLevel (res: Record<string, string>, key: string, val: string, pre = ''): Record<string, string> {
   const prefix = [pre, key].filter(v => v).join('.');
   return typeof val === 'object'

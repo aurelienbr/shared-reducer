@@ -1,1 +1,3 @@
-export * from './todoReducer';
+import * as todoReducers from './todoReducer';
+
+export default { ...todoReducers };

@@ -1,5 +1,6 @@
 {
   "declaration": true,
+  "noEmit": true,
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -19,8 +20,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
+    "outDir": "./dist"
   },
-  "exclude": [ "**/__tests__/*" ],
   "include": [
     "src"
   ]

@@ -1,5 +1,5 @@
 import { ADD_TODO, UPDATE_TODO, DELETE_TODO, ActionTypes } from '../actions/todoActions';
-import { Todo } from '../../types/';
+import { Todo } from '../../types/Todos';
 
 import { deleteObjectInArray, updateObjectInArray, addObjectInArray } from './../../utils/objectUtils';
 
@@ -11,7 +11,7 @@ const initialState: State = {
   todos: []
 };
 
-export default function (state: State = initialState, action: ActionTypes): State {
+export const todoReducers = (state: State = initialState, action: ActionTypes): State => {
   switch (action.type) {
     case ADD_TODO:
       return {
@@ -25,4 +25,4 @@ export default function (state: State = initialState, action: ActionTypes): Stat
     default:
       return state;
   }
-}
+};

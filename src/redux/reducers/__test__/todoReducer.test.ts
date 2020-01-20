@@ -1,4 +1,4 @@
-import reducer from '../todoReducer';
+import { todoReducers as reducer } from '../todoReducer';
 import { ADD_TODO, UPDATE_TODO, DELETE_TODO } from '../../actions/todoActions';
 
 describe('todoReducer', () => {
